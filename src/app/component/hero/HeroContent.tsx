@@ -5,13 +5,7 @@ import { fadeInUp } from "../../constants/animations";
 export const HeroContent = () => {
   return (
     <div className="flex-items justify-center text-center flex-col gap-2 py-12 max-w-screen-xl mx-auto">
-      <BreadCrumb
-        className="justify-center pb-16"
-        breadCrumbItem={[
-          { label: "Blog", href: "/" },
-          { label: "FOSO", href: "/" },
-        ]}
-      />
+      <BreadCrumb className="justify-center pb-16" />
       <div className="text-[64px] font-bold">
         <m.div {...fadeInUp}>
           <span>Blog</span> <span className="text-gradient"> FOSO</span>-
