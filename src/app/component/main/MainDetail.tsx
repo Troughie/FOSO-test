@@ -6,7 +6,7 @@ import { formatUrlText } from "@/app/utils";
 
 const MainDetail = () => {
   return (
-    <div className="w-screen">
+    <div className="w-full">
       <div className="my-4">
         <h1 className="text-4xl font-[800] my-4">
           Quy trình 5S là gì? Cách ứng dụng hiệu quả nên biết
@@ -29,7 +29,7 @@ const MainDetail = () => {
           <ArticleMeta />
         </div>
 
-        <main className="mx-4">
+        <main className="w-full">
           <div className="flex flex-col gap-2 my-[24px]">
             <div className="relative w-full h-[200px] md:h-[475px] overflow-hidden">
               <Image
