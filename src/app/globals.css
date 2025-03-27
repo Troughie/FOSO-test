@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --spacing-nav: 150.5px;
+  --spacing-2xl: 1440px;
+  --radius-5xl: 40px;
+  --color-gradient1: #09090b0d;
+  --color-gradient2: #1ad598;
+  --color-text-gradient: #53b086;
+  --color-textSmall: #667f93;
+  --color-glass: #15aa7a;
+  --color-blue1: #013da0;
+  --color-blue2: #0142a9;
+  --color-blue3: #0148b3;
+  --color-blue4: #024ebc;
+  --color-blue5: #0254c5;
+  --color-blue6: #025ace;
+  --color-blue7: #0261d7;
+  --color-blue8: #0267e1;
+  --color-blue9: #036eea;
+  --color-blue10: #0375f3;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  .flex-items {
+    @apply flex items-center;
+  }
+  .loadUnderline {
+    @apply duration-500 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:transition-transform after:duration-500 hover:scale-110 hover:after:scale-x-100;
+  }
+  .text-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-tr from-[#53b086] to-[#53b086]/40;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.bg-gradient-blue {
+  background: linear-gradient(
+    var(--color-blue2) 10%,
+    var(--color-blue3) 20%,
+    var(--color-blue4) 30%,
+    var(--color-blue5) 40%,
+    var(--color-blue6) 50%,
+    var(--color-blue7) 60%,
+    var(--color-blue8) 70%,
+    var(--color-blue9) 80%,
+    var(--color-blue10) 90%
+  );
 }
